@@ -5,6 +5,7 @@ import {
 import Books from './redux/books/books';
 import Categories from './redux/categories/categories';
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
   render() {
