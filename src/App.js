@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Books from './redux/books/books';
 import Categories from './redux/categories/categories';
+import 'bootstrap/dist/css/bootstrap.css';
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
   render() {
@@ -17,9 +18,6 @@ class App extends React.Component {
                 <ul>
                   <li>
                     <NavLink to="/books">Books</NavLink>
-                  </li>
-                  <li>
-                    <span>|</span>
                   </li>
                   <li>
                     <NavLink to="/categories">Categories</NavLink>
