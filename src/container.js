@@ -1,11 +1,13 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Switch, Route, NavLink, Redirect,
+  BrowserRouter as Router, Switch, Route, NavLink,
 } from 'react-router-dom';
 import Books from './redux/books/books';
 import Categories from './redux/categories/categories';
+import Footer from './components/Footer';
+
 // eslint-disable-next-line react/prefer-stateless-function
-class App extends React.Component {
+class Container extends React.Component {
   render() {
     return (
       <div>
@@ -16,7 +18,7 @@ class App extends React.Component {
               <div>
                 <ul>
                   <li>
-                    <NavLink to="/books">Books</NavLink>
+                    <NavLink exact to="/">Books</NavLink>
                   </li>
                   <li>
                     <span>|</span>
@@ -29,9 +31,6 @@ class App extends React.Component {
             </div>
           </nav>
           <Switch>
-            <Route exact path="/">
-              <Redirect to="/books" />
-            </Route>
             <Route path="/books">
               <Books />
             </Route>
@@ -40,9 +39,10 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
+        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default Container;
