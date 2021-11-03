@@ -2,8 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router, Switch, Route, NavLink, Redirect,
 } from 'react-router-dom';
-import Books from './redux/books/books';
-import Categories from './redux/categories/categories';
+import Books from './components/booksMain';
+import Categories from './components/categoriesMain';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 // eslint-disable-next-line react/prefer-stateless-function
