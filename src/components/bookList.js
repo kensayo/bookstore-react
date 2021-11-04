@@ -1,9 +1,7 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import RemoveBook from './removeBook';
 
 const BookList = () => {
-  // const bookStore = useSelector((state) => state.book);
   const bookStore = [{ id: 123, title: 'Lorem', author: 'Ipsum' }];
   return (
     <div className="d-flex flex-row justify-content-center my-2">
