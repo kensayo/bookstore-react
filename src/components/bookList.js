@@ -23,7 +23,7 @@ const BooksList = (props) => {
           <h5 className="author text-primary fw-light">{author}</h5>
           <div>
             <ul className="d-flex flex-row text-decoration-none navbar-nav">
-              <li className="text-primary fw-light mx-2">Comments</li>
+              <li className="text-primary fw-light me-2">Comments</li>
               <li> | </li>
               <li>
                 <button className="remove text-primary fw-light p-0 mx-2" type="button" onClick={() => deleteBook(props.id)}>Remove</button>

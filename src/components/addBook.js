@@ -14,6 +14,7 @@ const AddBook = () => {
     const bookCategory = eCategory.options[eCategory.selectedIndex].text;
     const id = uuidv4();
     eTitle.value = '';
+    eAuthor.value = '';
     dispatch(createBook({ title: bookTitle, category: bookCategory, item_id: id }));
   };
 
@@ -24,9 +25,11 @@ const AddBook = () => {
         <input type="text" id="title" className="Lesson-Panel" placeholder="Book title" />
         <input type="text" id="author" className="Lesson-Panel" placeholder="Book author" />
         <select type="select" className="Lesson-Panel p-0 w-25" id="category">
-          <option value="Lorem 1">Lorem 1</option>
-          <option value="Lorem 2">Lorem 2</option>
-          <option value="Lorem 3">Lorem 3</option>
+          <option value="Sci-Fi">Sci-fi</option>
+          <option value="Learning">Learning</option>
+          <option value="Programming">Programming</option>
+          <option value="Drama">Drama</option>
+          <option value="Thriller">Thriller</option>
         </select>
         <input type="button" className="btn btn-primary" onClick={() => { handleClick(); }} value="Add Book" />
       </div>
