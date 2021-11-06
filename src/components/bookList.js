@@ -15,7 +15,7 @@ const BooksList = (props) => {
     dispatch(removeBook(id));
   };
   return (
-    <div className="card mx-auto my-2">
+    <div className="card card-style mx-auto my-2">
       <div className="d-flex flex-row align-items-center justify-content-between my-2">
         <div className="d-flex flex-column px-3">
           <h5 className="text-secondary">{category}</h5>
