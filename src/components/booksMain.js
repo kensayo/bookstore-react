@@ -1,12 +1,36 @@
-import React from 'react';
-import BookList from './bookList';
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import BooksList from './bookList';
 import AddBookList from './addBook';
+import { getAPIBooks } from '../redux/books/books';
 
-const Books = () => (
-  <div className="d-flex flex-column justify-content-center mx-4">
-    <BookList />
-    <AddBookList />
-  </div>
-);
+const Books = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAPIBooks());
+  }, []);
+
+  const item = [];
+  const list = useSelector((data) => data.reduceBooks.books);
+  Object.entries(list).forEach((book) => {
+    const [key, value] = book;
+    item.push(value.map((e) => (
+      <BooksList
+        key={key}
+        title={e.title.split(' - ')[0]}
+        Author={e.title.split(' - ')[1]}
+        category={e.category}
+        id={key}
+      />
+    )));
+  });
+
+  return (
+    <div className="d-flex flex-column justify-content-center mx-4">
+      {item}
+      <AddBookList />
+    </div>
+  );
+};
 
 export default Books;
