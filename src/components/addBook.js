@@ -19,7 +19,7 @@ const AddBook = () => {
 
   return (
     <div className="mx-auto m-4">
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="add-book fw-bold text-secondary">ADD NEW BOOK</h2>
       <div>
         <input type="text" id="title" placeholder="Book title" />
         <input type="text" id="author" placeholder="Book author" />

@@ -14,14 +14,14 @@ class App extends React.Component {
         <Router>
           <nav className="navbar navbar-expand navbar-light bg-light">
             <div className="container-fluid">
-              <NavLink className="navbar-brand text-primary fw-bold fs-2" to="/">Bookstore</NavLink>
+              <NavLink className="navbar-brand text-primary fw-bold fs-2 p-0" to="/">Bookstore</NavLink>
               <div className="navbar-collapse">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start w-100 pe-5">
                   <li className="nav-item px-3">
-                    <NavLink className="nav-link" to="/books">Books</NavLink>
+                    <NavLink className="montserrat nav-link" to="/books">BOOKS</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/categories">Categories</NavLink>
+                    <NavLink className="montserrat nav-link" to="/categories">CATEGORIES</NavLink>
                   </li>
                 </ul>
               </div>

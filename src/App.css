@@ -1,9 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto+Slab&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Slab', serif;
 }
 
 .remove {
   background: none;
   border: none;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+}
+
+.completed {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;  
+}
+
+.card {
+  min-width: 720px;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.author {
+  font-size: 0.83rem;
+}
+
+.add-book {
+  font-size: 1.0rem;
+  font-family: 'Montserrat', sans-serif;
 }
