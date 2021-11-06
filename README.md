@@ -19,7 +19,7 @@
   
 ## 🌐 Live Preview
 
-> [Bookstore](https://competent-lovelace-5d8d22.netlify.app/books)
+> [Bookstore](https://competent-lovelace-5d8d22.netlify.app)
 
 ## 🚩 Getting Started
 
