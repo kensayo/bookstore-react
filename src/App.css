@@ -7,41 +7,7 @@ body {
   background-color: rgb(243, 243, 243);
 }
 
-.remove {
-  background: none;
-  border: none;
-}
-
 .montserrat {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
-}
-
-.completed {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-}
-
-.card-style {
-  min-width: 720px;
-  max-width: 1024px;
-  width: 100%;
-}
-
-.author {
-  font-size: 0.83rem;
-}
-
-.add-book {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.Lesson-Panel {
-  width: 30%;
-  height: 2.813rem;
-  padding: 1rem;
-  border-radius: 4px;
-  border: solid 1px var(--white);
-  background-color: #fff;
 }

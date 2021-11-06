@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import CircularProgress from '@mui/material/CircularProgress';
 import { removeBook } from '../redux/books/books';
+import '../css/bookList.css';
 
 const BooksList = (props) => {
   const dispatch = useDispatch();

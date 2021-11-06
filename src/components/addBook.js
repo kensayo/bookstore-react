@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { createBook } from '../redux/books/books';
+import '../css/addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
