@@ -8,8 +8,8 @@ const BooksList = (props) => {
   const {
     title, category, Author,
   } = props;
-  
-  const removeBookFromStore = (id) => {
+
+  const deleteBook = (id) => {
     dispatch(removeBook(id));
   };
   return (
@@ -22,7 +22,7 @@ const BooksList = (props) => {
           <div>
             <ul>
               <li>Comments</li>
-              <button type="button" onClick={() => removeBookFromStore(props.id)}>Remove</button>
+              <button type="button" onClick={() => deleteBook(props.id)}>Remove</button>
               <li>Edit</li>
             </ul>
           </div>

@@ -10,16 +10,16 @@ const Books = () => {
     dispatch(getAPIBooks());
   }, []);
 
-  const BookItem = [];
-  const booklist = useSelector((data) => data.reduceBooks.books);
-  Object.entries(booklist).forEach((element) => {
-    const [key, value] = element;
-    BookItem.push(value.map((item) => (
+  const item = [];
+  const list = useSelector((data) => data.reduceBooks.books);
+  Object.entries(list).forEach((book) => {
+    const [key, value] = book;
+    item.push(value.map((e) => (
       <BooksList
         key={key}
-        title={item.title}
-        Author={item.title}
-        category={item.category}
+        title={e.title.split(' - ')[0]}
+        Author={e.title.split(' - ')[1]}
+        category={e.category}
         id={key}
       />
     )));
@@ -27,7 +27,7 @@ const Books = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center mx-4">
-      {BookItem}
+      {item}
       <AddBookList />
     </div>
   );

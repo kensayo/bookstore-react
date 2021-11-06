@@ -9,7 +9,8 @@ const AddBook = () => {
   const handleClick = () => {
     const eTitle = document.getElementById('title');
     const eCategory = document.getElementById('category');
-    const bookTitle = eTitle.value;
+    const eAuthor = document.getElementById('author');
+    const bookTitle = `${eTitle.value} - ${eAuthor.value}`;
     const bookCategory = eCategory.options[eCategory.selectedIndex].text;
     const id = uuidv4();
     eTitle.value = '';
@@ -21,6 +22,7 @@ const AddBook = () => {
       <h2>ADD NEW BOOK</h2>
       <div>
         <input type="text" id="title" placeholder="Book title" />
+        <input type="text" id="author" placeholder="Book author" />
         <select type="select" id="category">
           <option value="Lorem 1">Lorem 1</option>
           <option value="Lorem 2">Lorem 2</option>
