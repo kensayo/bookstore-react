@@ -18,7 +18,7 @@ const Books = () => {
       <BooksList
         key={key}
         title={e.title.split(' - ')[0]}
-        Author={e.title.split(' - ')[1]}
+        author={e.title.split(' - ')[1]}
         category={e.category}
         id={key}
       />
@@ -26,7 +26,7 @@ const Books = () => {
   });
 
   return (
-    <div className="d-flex flex-column justify-content-center mx-4">
+    <div className="d-flex flex-column justify-content-center m-5">
       {item}
       <AddBookList />
     </div>

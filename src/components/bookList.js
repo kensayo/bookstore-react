@@ -6,23 +6,27 @@ import { removeBook } from '../redux/books/books';
 const BooksList = (props) => {
   const dispatch = useDispatch();
   const {
-    title, category, Author,
+    title, category, author,
   } = props;
 
   const deleteBook = (id) => {
     dispatch(removeBook(id));
   };
   return (
-    <div>
-      <div className="d-flex flex-row justify-content-center my-2">
+    <div className="card my-2">
+      <div className="d-flex flex-row justify-content-between my-2">
         <div className="d-flex flex-column px-3">
           <h3>{category}</h3>
           <h1>{title}</h1>
-          <span>{Author}</span>
+          <span>{author}</span>
           <div>
-            <ul>
+            <ul className="d-flex flex-row text-decoration-none navbar-nav">
               <li>Comments</li>
-              <button type="button" onClick={() => deleteBook(props.id)}>Remove</button>
+              <li> | </li>
+              <li>
+                <button className="remove p-0" type="button" onClick={() => deleteBook(props.id)}>Remove</button>
+              </li>
+              <li> | </li>
               <li>Edit</li>
             </ul>
           </div>
@@ -47,6 +51,6 @@ export default BooksList;
 BooksList.propTypes = {
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  Author: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
