@@ -12,16 +12,16 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <nav>
-            <div>
-              <NavLink to="/">Bookstore</NavLink>
-              <div>
-                <ul>
-                  <li>
-                    <NavLink to="/books">Books</NavLink>
+          <nav className="navbar navbar-expand navbar-light bg-light">
+            <div className="container-fluid">
+              <NavLink className="navbar-brand text-primary fw-bold fs-2 p-0" to="/">Bookstore</NavLink>
+              <div className="navbar-collapse">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start w-100 pe-5">
+                  <li className="nav-item px-3">
+                    <NavLink className="montserrat nav-link" to="/books">BOOKS</NavLink>
                   </li>
-                  <li>
-                    <NavLink to="/categories">Categories</NavLink>
+                  <li className="nav-item">
+                    <NavLink className="montserrat nav-link" to="/categories">CATEGORIES</NavLink>
                   </li>
                 </ul>
               </div>

@@ -4,7 +4,9 @@
 
 > Simple Bookstore where you can track the books you are reading.
 
-### 👷🏻 Built using
+![](./screenshot/screenshot.png)
+
+## 👷🏻 Built using
     - React
     - JavaScript
     - Redux
@@ -14,7 +16,10 @@
     - CSS
     - Bootstrap
     - Linters
+  
+## 🌐 Live Preview
 
+> [Bookstore](https://competent-lovelace-5d8d22.netlify.app/books)
 
 ## 🚩 Getting Started
 

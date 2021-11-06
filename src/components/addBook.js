@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { createBook } from '../redux/books/books';
+import '../css/addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -14,21 +15,24 @@ const AddBook = () => {
     const bookCategory = eCategory.options[eCategory.selectedIndex].text;
     const id = uuidv4();
     eTitle.value = '';
+    eAuthor.value = '';
     dispatch(createBook({ title: bookTitle, category: bookCategory, item_id: id }));
   };
 
   return (
-    <div className="mx-auto m-4">
-      <h2>ADD NEW BOOK</h2>
-      <div>
-        <input type="text" id="title" placeholder="Book title" />
-        <input type="text" id="author" placeholder="Book author" />
-        <select type="select" id="category">
-          <option value="Lorem 1">Lorem 1</option>
-          <option value="Lorem 2">Lorem 2</option>
-          <option value="Lorem 3">Lorem 3</option>
+    <div className="card-style mx-auto m-4">
+      <h2 className="add-book fw-bold text-secondary">ADD NEW BOOK</h2>
+      <div className="d-flex justify-content-between">
+        <input type="text" id="title" className="Lesson-Panel" placeholder="Book title" />
+        <input type="text" id="author" className="Lesson-Panel" placeholder="Book author" />
+        <select type="select" className="Lesson-Panel p-0 w-25" id="category">
+          <option value="Sci-Fi">Sci-fi</option>
+          <option value="Learning">Learning</option>
+          <option value="Programming">Programming</option>
+          <option value="Drama">Drama</option>
+          <option value="Thriller">Thriller</option>
         </select>
-        <input type="button" onClick={() => { handleClick(); }} value="Add Book" />
+        <input type="button" className="btn btn-primary" onClick={() => { handleClick(); }} value="Add Book" />
       </div>
     </div>
   );
