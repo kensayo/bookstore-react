@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { createBook } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const AddBook = () => {
     const bookCategory = eCategory.options[eCategory.selectedIndex].text;
     const id = uuidv4();
     eTitle.value = '';
-    dispatch(addBook({ title: bookTitle, category: bookCategory, id }));
+    dispatch(createBook({ title: bookTitle, category: bookCategory, item_id: id }));
   };
 
   return (
