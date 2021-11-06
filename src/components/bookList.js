@@ -8,6 +8,7 @@ const BooksList = (props) => {
   const {
     title, category, Author,
   } = props;
+  
   const removeBookFromStore = (id) => {
     dispatch(removeBook(id));
   };
