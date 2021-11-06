@@ -19,7 +19,7 @@ body {
 
 .completed {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;  
+  font-size: 0.75rem;
 }
 
 .card-style {
@@ -33,7 +33,7 @@ body {
 }
 
 .add-book {
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -45,4 +45,3 @@ body {
   border: solid 1px var(--white);
   background-color: #fff;
 }
-
