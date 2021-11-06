@@ -26,25 +26,5 @@ export const getAPIBooks = () => (dispatch) => {
     }));
 };
 
-export const createBook = (payload) => (dispatch) => {
-  fetch(`${api}/books`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  })
-    .then(() => dispatch(getAPIBooks()));
-};
-
-export const removeBook = (payload) => (dispatch) => {
-  fetch(`${api}/books/${payload}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then(() => dispatch(getAPIBooks()));
-};
 
 export default reduceBooks;
